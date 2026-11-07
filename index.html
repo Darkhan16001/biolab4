@@ -1,0 +1,1247 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>BIO LAB 17 | Жасушалық тыныс алу</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="app">
+<main class="main">
+
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">🧬</span>
+    <div>
+      <strong>BIO LAB 17</strong>
+      <small>Биология • 1-курс • Тынысалу</small>
+    </div>
+  </div>
+
+  <div class="top-actions">
+    <div class="clock">
+      ⏱ <b id="totalClock">00:00</b> / 80:00
+    </div>
+    <div class="clock">
+      ⌛ <b id="sectionClock">02:00</b>
+    </div>
+    <button class="btn secondary" id="fullscreenBtn">
+      ⛶ Толық экран
+    </button>
+  </div>
+</header>
+
+<!-- 0. КІРІСПЕ -->
+<section class="screen active" id="page-0">
+  <div class="hero">
+    <div class="eyebrow">17-ТАҚЫРЫП • БӨЛІМ 5</div>
+
+    <h1>
+      Жасушалық тыныс алу
+      <span>механизмін талдау</span>
+    </h1>
+
+    <p>
+      Аэробты және анаэробты жолдар,
+      гликолиз, Кребс циклі,
+      АҮФ синтезі және метаболизм.
+    </p>
+
+    <div class="stats">
+      <div><b>80</b><small>минут</small></div>
+      <div><b>24</b><small>оқушыға дейін</small></div>
+      <div><b>3</b><small>команда</small></div>
+      <div><b>3</b><small>ойын</small></div>
+    </div>
+
+    <button class="btn primary large"
+            onclick="goTo(1)">
+      Сабақты бастау →
+    </button>
+  </div>
+
+  <h2>Сабақтың мақсаттары</h2>
+
+  <div class="cards three">
+    <article class="card">
+      <div class="emoji">🍇</div>
+      <h3>Глюкозаның ыдырауы</h3>
+      <p>
+        Гликолиз, пируваттың тотығуы
+        және Кребс циклі
+        арасындағы байланысты түсіну.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">⚡</div>
+      <h3>Энергия түзілуі</h3>
+      <p>
+        АҮФ қай кезеңде
+        және қандай механизм
+        арқылы түзілетінін анықтау.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="emoji">🧪</div>
+      <h3>Ғылыми талдау</h3>
+      <p>
+        Оттегі бар және жоқ
+        жағдайда жасушалық
+        энергия алмасуын салыстыру.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Негізгі сұрақ:</b>
+    Неліктен глюкозаның оттегі
+    қатысында толық тотығуы
+    ашытуға қарағанда
+    әлдеқайда көп АҮФ береді?
+  </div>
+</section>
+
+<!-- 1. ЖАСУШАЛЫҚ ТЫНЫС АЛУ -->
+<section class="screen" id="page-1">
+  <div class="eyebrow">01 • ТҮСІНДІРУ • 3 МИНУТ</div>
+  <h1>🫁 Жасушалық тыныс алу деген не?</h1>
+
+  <p class="lead">
+    Жасушалық тыныс алу —
+    органикалық заттардан энергия
+    алуға қатысатын ферменттік
+    реакциялар жүйесі.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Cellular_respiration_EN.svg?width=1100"
+        alt="Жасушалық тыныс алудың кезеңдері"
+        onerror="this.hidden=true">
+      <figcaption>
+        Глюкозадан АҮФ түзілуінің
+        жалпы сызбасы. Wikimedia Commons.
+        Ескі схемалардағы АҮФ саны
+        қазіргі бағалаудан өзгеше болуы мүмкін.
+      </figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Mitochondrion_structure.svg?width=950"
+        alt="Митохондрияның құрылысы"
+        onerror="this.hidden=true">
+      <figcaption>
+        Митохондрияның құрылысы.
+        Kelvinsong / Wikimedia Commons.
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="formula-panel">
+    <h3>Аэробты тыныс алудың жалпы теңдеуі</h3>
+    <div class="formula">
+      C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O
+    </div>
+    <p>
+      Бөлінетін энергияның бір бөлігі
+      АҮФ түрінде сақталады,
+      қалған бөлігі жылу ретінде таралады.
+    </p>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h3>Аэробты тыныс алу</h3>
+      <p>
+        Оттегі соңғы электрон
+        акцепторы ретінде қатысады.
+        Глюкозаның толық тотығуы
+        көп АҮФ түзуге мүмкіндік береді.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Оттегісіз энергия алу</h3>
+      <p>
+        Кей жасушалар оттегісіз
+        жағдайда ашыту арқылы
+        гликолизді жалғастыра алады.
+        Кей микроағзалар анаэробты
+        тыныс алуды пайдаланады.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Айырмашылық:</b>
+    Өкпемен тыныс алу — газ алмасу.
+    Жасушалық тыныс алу —
+    жасушада жүретін
+    биохимиялық үдерістер жүйесі.
+  </div>
+</section>
+
+<!-- 2. ГЛИКОЛИЗ -->
+<section class="screen" id="page-2">
+  <div class="eyebrow">02 • ТҮСІНДІРУ • 3 МИНУТ</div>
+  <h1>🍇 Гликолиз — алғашқы кезең</h1>
+
+  <p class="lead">
+    Гликолиз цитозольде жүреді.
+    Бір глюкоза молекуласы
+    екі пируват молекуласына
+    дейін өзгеріп, аз мөлшерде
+    АҮФ және NADH түзіледі.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Glycolysis_pathway_2.png?width=1000"
+        alt="Гликолиздің он ферменттік кезеңі"
+        onerror="this.hidden=true">
+      <figcaption>
+        Гликолиздің негізгі сатылары.
+        Eunice Laurent / Wikimedia Commons.
+      </figcaption>
+    </figure>
+
+    <div class="diagram">
+      <h3>Гликолиздің нәтижесі</h3>
+      <div class="flow-step">🍇 1 глюкоза (6C)</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step purple">2 АҮФ жұмсалады</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">Екі 3C аралық молекула</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step green">
+        4 АҮФ түзіледі, 2 NADH
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">2 пируват (3C)</div>
+    </div>
+  </div>
+
+  <div class="formula-panel">
+    <div class="formula">
+      4 АҮФ − 2 АҮФ = таза 2 АҮФ
+    </div>
+    <p>
+      Сонымен бірге 2 NADH
+      және 2 пируват түзіледі.
+    </p>
+  </div>
+
+  <div class="callout">
+    <b>Сұрақ:</b>
+    Неліктен гликолиз
+    оттегіні тікелей қажет етпесе де,
+    оны жасушалық тыныс алудың
+    маңызды кезеңі деп атаймыз?
+  </div>
+</section>
+
+<!-- 3. ПИРУВАТ ЖӘНЕ КРЕБС -->
+<section class="screen" id="page-3">
+  <div class="eyebrow">03 • ТҮСІНДІРУ • 3 МИНУТ</div>
+  <h1>🔄 Пируваттың тотығуы және Кребс циклі</h1>
+
+  <p class="lead">
+    Аэробты жағдайда эукариот
+    жасушасындағы пируват
+    митохондрияға тасымалданып,
+    ацетил-КоА-ға айналады.
+    Содан кейін Кребс цикліне қатысады.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Citric_acid_cycle.svg?width=1100"
+        alt="Кребс циклінің биохимиялық сызбасы"
+        onerror="this.hidden=true">
+      <figcaption>
+        Кребс циклі.
+        Choij / Wikimedia Commons.
+      </figcaption>
+    </figure>
+
+    <div class="diagram">
+      <h3>Көміртек атомдарының жолы</h3>
+      <div class="flow-step">2 пируват (3C + 3C)</div>
+      <div class="flow-arrow">↓ CO₂, NADH</div>
+      <div class="flow-step purple">
+        2 ацетил-КоА (2C + 2C)
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step green">
+        Кребс циклі
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        CO₂ + NADH + FADH₂ + GTP/АҮФ
+      </div>
+    </div>
+  </div>
+
+  <div class="cards three">
+    <article class="card">
+      <h3>CO₂</h3>
+      <p>
+        Көміртек атомдары
+        көмірқышқыл газы
+        түрінде бөлінеді.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>NADH және FADH₂</h3>
+      <p>
+        Жоғары энергиялы электрондарды
+        кейінгі тасымалдау
+        тізбегіне жеткізеді.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>АҮФ/GTP</h3>
+      <p>
+        Циклде аз мөлшерде
+        субстраттық фосфорлану
+        өнімі түзіледі.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Бір глюкоза үшін:</b>
+    Кребс циклінің екі айналымы
+    кезінде 4 CO₂, 6 NADH,
+    2 FADH₂ және 2 GTP/АҮФ
+    эквиваленті түзіледі.
+  </div>
+</section>
+
+<!-- 4. ЭЛЕКТРОН ТІЗБЕГІ -->
+<section class="screen" id="page-4">
+  <div class="eyebrow">04 • ТҮСІНДІРУ • 3 МИНУТ</div>
+  <h1>⚙️ Электрон тасымалдау және АҮФ-синтаза</h1>
+
+  <p class="lead">
+    Эукариоттарда электрон
+    тасымалдау тізбегі
+    митохондрияның ішкі
+    мембранасында орналасады.
+  </p>
+
+  <div class="photos">
+    <figure class="photo">
+      <img loading="lazy"
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/Mitochondrion_structure.svg?width=950"
+        alt="Митохондрия мембраналары"
+        onerror="this.hidden=true">
+      <figcaption>
+        АҮФ синтезіне ішкі
+        мембрана мен кристалар қатысады.
+      </figcaption>
+    </figure>
+
+    <div class="diagram">
+      <h3>АҮФ синтезінің тізбегі</h3>
+      <div class="flow-step">NADH, FADH₂</div>
+      <div class="flow-arrow">↓ электрондар</div>
+      <div class="flow-step purple">
+        Электрон тасымалдау тізбегі
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">
+        H⁺ градиенті
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step green">
+        АҮФ-синтаза → АҮФ
+      </div>
+    </div>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <b>1</b>
+      <span>NADH, FADH₂ электрондарын береді</span>
+    </div>
+    <div class="step">
+      <b>2</b>
+      <span>Электрондар тізбек бойымен өтеді</span>
+    </div>
+    <div class="step">
+      <b>3</b>
+      <span>H⁺ мембранааралық кеңістікте жиналады</span>
+    </div>
+    <div class="step">
+      <b>4</b>
+      <span>H⁺ АҮФ-синтаза арқылы өтеді</span>
+    </div>
+    <div class="step">
+      <b>5</b>
+      <span>АДФ + Pi → АҮФ</span>
+    </div>
+    <div class="step">
+      <b>6</b>
+      <span>O₂ соңғы электрон акцепторы болып, су түзіледі</span>
+    </div>
+  </div>
+
+  <div class="formula-panel">
+    <h3>Бір глюкозадан алынатын АҮФ</h3>
+    <div class="formula">
+      Шамамен 30–32 АҮФ
+    </div>
+    <p>
+      Эукариоттардағы толық
+      аэробты тотығудың
+      жиі қолданылатын
+      қазіргі бағалауы.
+    </p>
+  </div>
+</section>
+
+<!-- 5. АЭРОБТЫ ЖӘНЕ АШЫТУ -->
+<section class="screen" id="page-5">
+  <div class="eyebrow">05 • ТҮСІНДІРУ • 3 МИНУТ</div>
+  <h1>🧪 Аэробты және оттегісіз жолдарды салыстыру</h1>
+
+  <p class="lead">
+    Оттегі қатысқан толық
+    тотығу мен ашыту
+    энергия алу тәсілі
+    жағынан ерекшеленеді.
+  </p>
+
+  <div class="compare-grid">
+    <div class="compare-card oxygen">
+      <div class="emoji">🫁</div>
+      <h3>Аэробты тыныс алу</h3>
+      <div class="big-number">≈30–32</div>
+      <p>Бір глюкозадан АҮФ</p>
+      <p>
+        Гликолиз → пируваттың тотығуы →
+        Кребс циклі → тотығу фосфорлануы.
+      </p>
+      <p>Соңғы акцептор: O₂.</p>
+    </div>
+
+    <div class="compare-card no-oxygen">
+      <div class="emoji">🧫</div>
+      <h3>Ашыту (ферментация)</h3>
+      <div class="big-number">2</div>
+      <p>Бір глюкозадан таза АҮФ</p>
+      <p>
+        Гликолиз → пируваттың
+        лактатқа немесе этанолға
+        айналуы.
+      </p>
+      <p>
+        Негізгі мақсаттарының бірі —
+        NAD⁺-ты қалпына келтіру.
+      </p>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Белгісі</th>
+          <th>Аэробты</th>
+          <th>Ашыту</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>O₂</td>
+          <td>Соңғы акцептор</td>
+          <td>Тікелей қажет емес</td>
+        </tr>
+        <tr>
+          <td>Кезеңдер</td>
+          <td>Гликолиз, Кребс, тізбек</td>
+          <td>Гликолиз, ашыту реакциялары</td>
+        </tr>
+        <tr>
+          <td>АҮФ (глюкозаға)</td>
+          <td>≈30–32</td>
+          <td>2 таза АҮФ</td>
+        </tr>
+        <tr>
+          <td>Өнімдер</td>
+          <td>CO₂, H₂O</td>
+          <td>Лактат немесе этанол + CO₂</td>
+        </tr>
+        <tr>
+          <td>Энергия шығымы</td>
+          <td>Жоғары</td>
+          <td>Төмен</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <b>Ғылыми дәлдік:</b>
+    анаэробты тыныс алу мен ашыту
+    бірдей емес. Кей микроағзалар
+    оттегінің орнына басқа соңғы
+    электрон акцепторын пайдаланып,
+    нағыз анаэробты тыныс алады.
+  </div>
+</section>
+
+<!-- 6. МЕТАБОЛИЗМ -->
+<section class="screen" id="page-6">
+  <div class="eyebrow">06 • ТҮСІНДІРУ • 3 МИНУТ</div>
+  <h1>🔁 Метаболизм түрлері</h1>
+
+  <p class="lead">
+    Метаболизм — ағзадағы
+    барлық химиялық реакциялардың
+    жиынтығы. Негізгі екі бағыты
+    катаболизм және анаболизм.
+  </p>
+
+  <div class="compare-grid">
+    <article class="compare-card oxygen">
+      <div class="emoji">⬇️</div>
+      <h3>Катаболизм</h3>
+      <p>
+        Күрделі молекулалардың
+        қарапайым қосылыстарға
+        дейін ыдырауы.
+        Энергия бөлінуімен
+        байланысты болуы мүмкін.
+      </p>
+      <div class="small-formula">
+        Глюкоза → CO₂ + H₂O
+      </div>
+    </article>
+
+    <article class="compare-card no-oxygen">
+      <div class="emoji">⬆️</div>
+      <h3>Анаболизм</h3>
+      <p>
+        Қарапайым заттардан
+        күрделі молекулалардың
+        синтезделуі.
+        Көбіне энергияны қажет етеді.
+      </p>
+      <div class="small-formula">
+        Аминқышқылдары → Нәруыз
+      </div>
+    </article>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <h3>АҮФ-пен байланысы</h3>
+      <p>
+        Катаболизм энергиясының
+        бір бөлігі АҮФ синтезіне
+        жұмсалады. АҮФ энергияны
+        қажет ететін анаболизм
+        реакцияларына қатысады.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Амфиболикалық жол</h3>
+      <p>
+        Кей метаболизм жолдары
+        ыдырау мен биосинтезге
+        бірдей қызмет етеді.
+        Кребс циклі — мысал.
+      </p>
+    </article>
+  </div>
+
+  <div class="callout">
+    <b>Күрделі сұрақ:</b>
+    Неліктен Кребс циклі тек
+    энергия өндіруге ғана емес,
+    кей құрылыс молекулаларын
+    түзуге де қатыса алады?
+  </div>
+</section>
+
+<!-- 7. YOUTUBE -->
+<section class="screen" id="page-7">
+  <div class="eyebrow">07 • БЕЙНЕСАБАҚ • 5 МИНУТ</div>
+  <h1>▶️ Қазақша бейнесабақтар</h1>
+
+  <p class="lead">
+    Бірінші бейне гликолизге,
+    екіншісі аэробты және
+    анаэробты жолдарға арналған.
+    Қажетті үзіндіні көрсетіп,
+    қалған уақытта сұрақтарды талқыла.
+  </p>
+
+  <div class="toolbar">
+    <button class="btn primary" data-video="0">
+      ▶ Гликолиз кезеңдері
+    </button>
+    <button class="btn secondary" data-video="1">
+      ▶ Аэробты және анаэробты
+    </button>
+    <button class="btn danger" id="stopVideo">
+      ⏹ Тоқтату
+    </button>
+  </div>
+
+  <div class="video-frame">
+    <iframe id="videoPlayer"
+      src="about:blank"
+      title="Жасушалық тыныс алу бейнесабағы"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+
+  <p class="feedback" id="videoTitle">
+    Көру үшін бейне таңда.
+  </p>
+
+  <a id="videoLink"
+     href="https://www.youtube.com/watch?v=mbi3F_zsENs"
+     target="_blank"
+     rel="noopener noreferrer">
+    Видео ашылмаса, YouTube-та ашу
+  </a>
+
+  <div class="card">
+    <h3>Талқылау сұрақтары</h3>
+    <ol class="reading-list">
+      <li>
+        Неліктен гликолиз екі
+        түрлі энергия алу жолына ортақ?
+      </li>
+      <li>
+        Аэробты жолда АҮФ
+        неге көбірек түзіледі?
+      </li>
+      <li>
+        Ашыту кезінде NAD⁺
+        не үшін қажет?
+      </li>
+      <li>
+        Тотығу фосфорлануы
+        оттегіге қалай тәуелді?
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8. КОНСПЕКТ -->
+<section class="screen" id="page-8">
+  <div class="eyebrow">08 • КОНСПЕКТ • 12 МИНУТ</div>
+  <h1>📚 Толық конспект</h1>
+
+  <p class="lead">
+    Алғашқы 12 тармақ —
+    дәптерге жазылатын негізгі
+    материал. Қалған бөлімдер
+    күрделі ойындар мен
+    ауызша сұрақтарға дайындық.
+  </p>
+
+  <div class="notes" id="notesContent">
+    <h2>§17. Жасушалық тыныс алу механизмін талдау</h2>
+
+    <h3>1. Жасушалық тыныс алу ұғымы</h3>
+    <p>
+      Жасушалық тыныс алу —
+      органикалық қосылыстардан
+      энергия алуға қатысатын
+      ферменттік реакциялар жүйесі.
+      Бұл энергияның бір бөлігі
+      АҮФ молекулалары түрінде сақталады.
+    </p>
+
+    <h3>2. Аэробты тыныс алу</h3>
+    <p>
+      Аэробты тыныс алу —
+      оттегі соңғы электрон
+      акцепторы болып қатысатын
+      жасушалық энергия алу жолы.
+      Глюкозаның толық тотығу
+      өнімдері — көмірқышқыл
+      газы мен су.
+    </p>
+
+    <h3>3. Жалпы теңдеу</h3>
+    <p>
+      C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O.
+      Реакциялардан бөлінетін
+      энергияның бір бөлігі
+      АҮФ синтезіне пайдаланылады,
+      қалған бөлігі жылу ретінде таралады.
+    </p>
+
+    <h3>4. Гликолиз</h3>
+    <p>
+      Гликолиз — глюкозаның
+      пируватқа дейін өзгеру
+      реакциялары. Эукариот
+      жасушаларында цитозольде
+      жүреді. Оттегіні
+      тікелей пайдаланбайды.
+    </p>
+
+    <h3>5. Гликолиз нәтижесі</h3>
+    <p>
+      Бір глюкоза молекуласынан
+      екі пируват, екі NADH
+      және таза екі АҮФ
+      түзіледі. Алғашқы
+      реакцияларда екі АҮФ
+      жұмсалып, кейін төрт
+      АҮФ түзіледі.
+    </p>
+
+    <h3>6. Пируваттың тотығуы</h3>
+    <p>
+      Аэробты жағдайда
+      пируват митохондрия
+      матриксінде ацетил-КоА-ға
+      айналады. Бір глюкозадан
+      екі ацетил-КоА,
+      екі CO₂ және екі NADH
+      түзіледі.
+    </p>
+
+    <h3>7. Кребс циклі</h3>
+    <p>
+      Кребс циклі —
+      ацетил-КоА-ның
+      тотығуына қатысатын
+      реакциялар жүйесі.
+      Эукариот жасушаларында
+      митохондрия матриксінде жүреді.
+    </p>
+
+    <h3>8. Кребс циклінің өнімдері</h3>
+    <p>
+      Бір глюкозаға сәйкес
+      циклдің екі айналымында
+      төрт CO₂, алты NADH,
+      екі FADH₂ және
+      екі GTP немесе АҮФ
+      эквиваленті түзіледі.
+    </p>
+
+    <h3>9. Электрон тасымалдау тізбегі</h3>
+    <p>
+      Электрон тасымалдау
+      тізбегі митохондрияның
+      ішкі мембранасында
+      орналасады. NADH пен
+      FADH₂ электрондарын береді.
+      Бөлінген энергия
+      протондық градиент
+      жасауға жұмсалады.
+    </p>
+
+    <h3>10. АҮФ-синтаза</h3>
+    <p>
+      АҮФ-синтаза —
+      протондық градиенттің
+      энергиясын пайдаланып,
+      АДФ пен бейорганикалық
+      фосфаттан АҮФ түзетін фермент.
+    </p>
+
+    <h3>11. Аэробты жолдың АҮФ шығымы</h3>
+    <p>
+      Эукариот жасушасында
+      бір глюкозаның толық
+      аэробты тотығуы
+      әдетте шамамен 30–32
+      АҮФ береді. Нақты
+      мөлшер жасуша
+      жағдайларына байланысты.
+    </p>
+
+    <h3>12. Ашыту</h3>
+    <p>
+      Ашыту — оттегіні
+      тікелей қажет етпейтін,
+      NAD⁺ қайта түзілуіне
+      мүмкіндік беретін үдеріс.
+      Сүтқышқылды және
+      спирттік ашыту түрлері бар.
+      Таза АҮФ шығымы
+      гликолизден 2 АҮФ.
+    </p>
+
+    <hr>
+
+    <h2>Қосымша ғылыми материал</h2>
+
+    <h3>13. Сүтқышқылды ашыту</h3>
+    <p>
+      Пируват лактатқа
+      дейін тотықсызданады,
+      ал NADH қайтадан NAD⁺-қа
+      айналады. Бұл
+      гликолиздің жалғасуына
+      мүмкіндік береді.
+    </p>
+
+    <h3>14. Спирттік ашыту</h3>
+    <p>
+      Ашытқыларда пируват
+      бірнеше реакциядан
+      кейін этанол мен CO₂
+      түзуге қатысады.
+      NAD⁺ қайта түзіліп,
+      гликолиз жалғасады.
+    </p>
+
+    <h3>15. Анаэробты тыныс алу</h3>
+    <p>
+      Кей бактериялар мен
+      археялар оттегі орнына
+      нитрат, сульфат немесе
+      басқа заттарды соңғы
+      электрон акцепторы
+      ретінде пайдалана алады.
+      Мұндай анаэробты
+      тыныс алуда электрон
+      тасымалдау тізбегі болады.
+      Бұл ашытудан өзгеше.
+    </p>
+
+    <h3>16. Энергия шығымының айырмашылығы</h3>
+    <p>
+      Аэробты тыныс алу
+      глюкозаны толық тотығуға
+      мүмкіндік береді.
+      Сондықтан ашытуға
+      қарағанда көбірек
+      энергия АҮФ түрінде
+      сақталады.
+    </p>
+
+    <h3>17. Катаболизм</h3>
+    <p>
+      Катаболизм —
+      күрделі заттардың
+      ыдырау реакциялары.
+      Энергия бөлетін
+      катаболизм реакциялары
+      АҮФ түзілуімен
+      байланыса алады.
+    </p>
+
+    <h3>18. Анаболизм</h3>
+    <p>
+      Анаболизм —
+      қарапайым молекулалардан
+      күрделі қосылыстар
+      синтезделетін үдерістер.
+      Көп жағдайда
+      энергияны қажет етеді.
+    </p>
+
+    <h3>19. Метаболизмнің реттелуі</h3>
+    <p>
+      Жасушада энергияның
+      жеткіліктілігі АҮФ,
+      АДФ және басқа
+      қосылыстардың қатынасына
+      байланысты реттеледі.
+      Энергия тапшылығы
+      кей катаболизм жолдарының
+      белсенділігін арттыра алады.
+    </p>
+
+    <h3>20. Қорытынды</h3>
+    <p>
+      Жасушалық тыныс алу
+      глюкозаның ыдырау
+      кезеңдерінен тұрады.
+      Гликолиз цитозольде,
+      Кребс циклі матриксте,
+      ал тотығу фосфорлануы
+      митохондрияның ішкі
+      мембранасында жүреді.
+      Аэробты тыныс алу
+      ашытуға қарағанда
+      әлдеқайда көп АҮФ береді.
+    </p>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn primary" id="copyNotes">
+      📋 Конспектіні көшіру
+    </button>
+    <button class="btn secondary"
+            onclick="window.print()">
+      🖨 Басып шығару
+    </button>
+  </div>
+</section>
+
+<!-- 9. ҚАТЫСУ -->
+<section class="screen" id="page-9">
+  <div class="eyebrow">09 • ҚАТЫСУШЫЛАР • 3 МИНУТ</div>
+  <h1>👥 Қатысушыларды белгілеу</h1>
+
+  <p class="lead">
+    Енді ғана оқушылар тізімі ашылады.
+    24 есім дайын. Сабаққа келмегендерді
+    алып таста, кейін қажет болса қайтар.
+  </p>
+
+  <div class="summary-grid">
+    <div>
+      <span>Қатысады</span>
+      <strong id="presentCount">24</strong>
+    </div>
+    <div>
+      <span>Қатыспайды</span>
+      <strong id="absentCount">0</strong>
+    </div>
+    <div>
+      <span>Команда</span>
+      <strong id="teamCount">3</strong>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn secondary" id="allPresent">
+      ✅ Барлығын қайтару
+    </button>
+  </div>
+
+  <h2>Қатысатын оқушылар</h2>
+  <div id="presentList" class="student-grid"></div>
+
+  <div class="card">
+    <h3>Қатыспайтын оқушылар</h3>
+    <div id="absentList"></div>
+  </div>
+
+  <p class="feedback" id="attendanceFeedback"></p>
+
+  <h2>3 командаға бөлу</h2>
+  <div class="team-grid" id="teamRoster"></div>
+</section>
+
+<!-- 10. АУЫЗША -->
+<section class="screen" id="page-10">
+  <div class="eyebrow">10 • АУЫЗША • 18 МИНУТ</div>
+  <h1>🎤 Random Student — ғылыми талдау</h1>
+
+  <p class="lead">
+    Қатысып отырған оқушылар
+    кездейсоқ таңдалады.
+    Бір рет бағаланған оқушы
+    барлық кезек біткенше
+    қайта таңдалмайды.
+  </p>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="oralProgressText">0 / 24</span>
+      <span class="points">Максимум 3 ұпай</span>
+    </div>
+
+    <div class="chosen-student" id="oralStudent">
+      🎲 Рандом таңдау
+    </div>
+
+    <h2 id="oralQuestion">
+      Оқушыны таңдау батырмасын бас.
+    </h2>
+
+    <div id="oralAnswer"
+         class="answer-panel"
+         hidden></div>
+
+    <div class="toolbar">
+      <button class="btn primary" id="oralPick">
+        🎲 Рандом таңдау
+      </button>
+      <button class="btn secondary" id="oralReveal">
+        👁 Жауапты көрсету
+      </button>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn success oral-grade"
+              data-points="3">✅ 3 ұпай</button>
+      <button class="btn secondary oral-grade"
+              data-points="2">🟡 2 ұпай</button>
+      <button class="btn secondary oral-grade"
+              data-points="1">🟠 1 ұпай</button>
+      <button class="btn danger oral-grade"
+              data-points="0">❌ 0 ұпай</button>
+    </div>
+
+    <p class="feedback" id="oralFeedback"></p>
+  </div>
+
+  <h2>Ауызша жауап нәтижелері</h2>
+  <div id="oralResults" class="progress-grid"></div>
+</section>
+
+<!-- 11. ЖЕКЕ ТЕСТ -->
+<section class="screen" id="page-11">
+  <div class="eyebrow">11 • ЖЕКЕ ТЕСТ • 10 МИНУТ</div>
+  <h1>🧠 Кездейсоқ жеке тест</h1>
+
+  <p class="lead">
+    Әр оқушыға жеке күрделі тест беріледі.
+    Қате жауап шықса, ғылыми түсіндірмесі
+    де көрсетіледі. Дұрыс жауап +2 ұпай.
+  </p>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="quizProgressText">0 / 24</span>
+      <span class="points">Дұрыс +2 ұпай</span>
+    </div>
+
+    <div class="chosen-student" id="quizStudent">
+      🎲 Оқушыны таңдау
+    </div>
+
+    <h2 id="quizQuestion">
+      Рандом батырмасын бас.
+    </h2>
+
+    <div id="quizOptions" class="choices"></div>
+
+    <div class="toolbar">
+      <button class="btn primary" id="quizPick">
+        🎲 Рандом таңдау
+      </button>
+      <button class="btn success" id="quizCheck">
+        ✅ Тексеру
+      </button>
+    </div>
+
+    <p class="feedback" id="quizFeedback"></p>
+  </div>
+
+  <h2>Тест нәтижелері</h2>
+  <div id="quizResults" class="progress-grid"></div>
+</section>
+
+<!-- 12. 1-ОЙЫН -->
+<section class="screen" id="page-12">
+  <div class="eyebrow">12 • 1-ОЙЫН • 4 МИНУТ</div>
+  <h1>⚡ RESPIRATION BATTLE</h1>
+
+  <p class="lead">
+    Әр командаға үш ғылыми
+    жағдаят беріледі.
+    Дұрыс жауап үшін +3 ұпай.
+  </p>
+
+  <div id="game1Scores" class="team-grid"></div>
+
+  <div class="question-card">
+    <div class="question-top">
+      <span id="battleNumber"></span>
+      <span class="points" id="battleTeam"></span>
+    </div>
+
+    <div class="progress-track">
+      <div id="battleBar"></div>
+    </div>
+
+    <h2 id="battleQuestion"></h2>
+    <div id="battleOptions" class="choices"></div>
+
+    <div class="toolbar">
+      <button class="btn success" id="battleCheck">
+        ✅ Тексеру
+      </button>
+      <button class="btn primary" id="battleNext">
+        Келесі →
+      </button>
+    </div>
+
+    <p class="feedback" id="battleFeedback"></p>
+  </div>
+</section>
+
+<!-- 13. 2-ОЙЫН -->
+<section class="screen" id="page-13">
+  <div class="eyebrow">13 • 2-ОЙЫН • 3 МИНУТ</div>
+  <h1>🧩 Ғылыми детектив</h1>
+
+  <p class="lead">
+    Әр команда төрт тұжырымның
+    дұрыс немесе қате екенін анықтайды.
+    Әр дұрыс шешім +1 ұпай.
+  </p>
+
+  <div id="game2Scores" class="team-grid"></div>
+  <div id="logicArea"></div>
+</section>
+
+<!-- 14. 3-ОЙЫН -->
+<section class="screen" id="page-14">
+  <div class="eyebrow">14 • 3-ОЙЫН • 3 МИНУТ</div>
+  <h1>🎨 Энергия зертханасы</h1>
+
+  <p class="lead">
+    Әр командаға бөлек шығармашылық
+    тапсырма беріледі. Сызба
+    салып, ғылыми дәлелмен қорғайды.
+  </p>
+
+  <div id="game3Scores" class="team-grid"></div>
+  <div id="creativeArea"></div>
+</section>
+
+<!-- 15. ҚОРЫТЫНДЫ -->
+<section class="screen" id="page-15">
+  <div class="eyebrow">15 • ҚОРЫТЫНДЫ • 2 МИНУТ</div>
+  <h1>🏆 Сабақтың қорытындысы</h1>
+
+  <div class="winner" id="winner"></div>
+
+  <h2>Командалық нәтижелер</h2>
+  <div class="team-grid" id="finalScores"></div>
+
+  <h2>Жеке бағалар</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Оқушы</th>
+          <th>Команда</th>
+          <th>Ауызша</th>
+          <th>Тест</th>
+          <th>Барлығы</th>
+        </tr>
+      </thead>
+      <tbody id="studentResults"></tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <b>Қорытынды:</b>
+    жасушалық тыныс алу —
+    энергия өндірудің биохимиялық
+    жүйесі. Аэробты толық тотығу
+    ашытуға қарағанда көбірек
+    АҮФ береді. Катаболизм
+    мен анаболизм жасуша
+    метаболизмінің өзара
+    байланысты бағыттары.
+  </div>
+
+  <div class="toolbar">
+    <button class="btn secondary"
+            onclick="window.print()">
+      🖨 Нәтижені басып шығару
+    </button>
+    <button class="btn danger" id="resetLesson">
+      🔄 Жаңа сабақ
+    </button>
+  </div>
+
+  <footer>MADE BY DARKHAN • BIO LAB 17</footer>
+</section>
+
+<!-- ТӨМЕНГІ БАТЫРМАЛАР -->
+<div class="bottom-nav">
+  <button class="btn secondary" id="previousPage">
+    ← Артқа
+  </button>
+  <span id="pageIndicator">1 / 16</span>
+  <button class="btn primary" id="nextPage">
+    Келесі →
+  </button>
+</div>
+
+</main>
+
+<!-- ОҢ ЖАҚ МӘЗІР -->
+<aside class="sidebar">
+  <div class="sidebar-logo">🧬 BIO LAB 17</div>
+
+  <nav id="sidebarNav">
+    <button class="nav-btn active" data-page="0">
+      🏠 Басты бет
+    </button>
+    <button class="nav-btn" data-page="1">
+      🫁 Тыныс алу
+    </button>
+    <button class="nav-btn" data-page="2">
+      🍇 Гликолиз
+    </button>
+    <button class="nav-btn" data-page="3">
+      🔄 Кребс циклі
+    </button>
+    <button class="nav-btn" data-page="4">
+      ⚙️ Электрон тізбегі
+    </button>
+    <button class="nav-btn" data-page="5">
+      🧪 Аэробты және ашыту
+    </button>
+    <button class="nav-btn" data-page="6">
+      🔁 Метаболизм
+    </button>
+    <button class="nav-btn" data-page="7">
+      ▶️ YouTube
+    </button>
+    <button class="nav-btn" data-page="8">
+      📚 Конспект
+    </button>
+    <button class="nav-btn" data-page="9">
+      👥 Қатысушылар
+    </button>
+    <button class="nav-btn" data-page="10">
+      🎤 Ауызша
+    </button>
+    <button class="nav-btn" data-page="11">
+      🧠 Жеке тест
+    </button>
+    <button class="nav-btn" data-page="12">
+      ⚡ 1-ойын
+    </button>
+    <button class="nav-btn" data-page="13">
+      🧩 2-ойын
+    </button>
+    <button class="nav-btn" data-page="14">
+      🎨 3-ойын
+    </button>
+    <button class="nav-btn" data-page="15">
+      🏆 Қорытынды
+    </button>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <div id="sidebarScores"></div>
+    <strong>BY DARKHAN</strong>
+  </div>
+</aside>
+
+</div>
+
+</body>
+</html>
